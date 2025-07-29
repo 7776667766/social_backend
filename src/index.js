@@ -8,19 +8,17 @@ import routes from './routes/index.js';
 
 const app = express();
 dotenv.config();
-/* eslint-disable no-undef */
-const logFormat = process.env.NODE_ENV === 'development' ? 'dev' : 'combined';
-
-app.use(morgan(logFormat));
 
 app.use(cors());
 app.use(bodyParser.json({ limit: '30mb', extended: true }));
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }));
 
 app.use(routes);
-app.get('/', (req, res) => {
-  res.send('Server is working.');
-});
+
+app.get('/', (req, res)=>{
+res.send('server chal rha ha ')
+})
+
 /* eslint-disable no-undef */
 const CONNECTION_URL = process.env.CONNECTION_URL;
 const PORT = process.env.PORT || 3000;
