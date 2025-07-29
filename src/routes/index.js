@@ -1,3 +1,5 @@
+import commentsRoutes from '../routes/comments.js';
+import postsRoutes from '../routes/posts.js';
 import userRoutes from '../routes/user.js';
 import express from 'express';
 
@@ -7,6 +9,14 @@ const defaultRoutes = [
   {
     path: '/auth',
     route: userRoutes,
+  },
+  {
+    path: '/posts',
+    route: postsRoutes,
+  },
+{
+    path: '/comments',
+    route: commentsRoutes,
   }
 ];
 

@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }));
 
 app.use(routes);
 
-app.get('/', (req, res)=>{
+app.get('/azka', (req, res)=>{
 res.send('server chal rha ha ')
 })
 
